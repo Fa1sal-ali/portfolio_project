@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class post(models.Model):
+    title = models.CharField(max_length=50)
+    date_time_stamp = models.DateTimeField()
+    image = models.ImageField(upload_to="images/")
+    content = models.TextField()
+
