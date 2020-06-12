@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Faisal Ali | Back-end, Front-end Developer &amp; Mentor</title>
+    <link rel="icon" href="media/images/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Faisal Ali</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="https://github.com/Fa1sal-ali" target="_blank">GitHub</a>
+                <a class="nav-item nav-link" href="https://www.linkedin.com/in/fa1zali/" target="_blank">Linkedin</a>
+                <a class="nav-item nav-link" href="#">Resume</a>
+                <a class="nav-item nav-link" href="#">Blog</a>
+                <a class="nav-item nav-link" href="mailto:fzl.ali33@gmail.com" aria-disabled="true">Say Hello</a>
+              </div>
+            </div>
+          </nav>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Self taught, Back-end, Front-end Developer & Mentor</h1>
+      <p class="lead text-muted">I design and code beautifully simple things, and I love what I do.</p>
+      <img src="media/images/avatar.svg" alt="avatar" height="200">
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <section class="jumbotron text-center album py-3 bg-light">
+        <div class="container">
+            <img src="/media/images/code_thinking.svg" class="img-fluid" alt="code_thinking" height="auto">
+          <h2>Hi, I'm Faisal. Nice to meet you</h2>
+            <p class="lead text-muted">
+              Since beginning my journey 4 years ago, i was working initially in networking domain. 
+              With rise in automation in NETWORKS, i started learning programming and gradually transitioned to a developer. 
+              I am currently working for Bharti Airtel, collaborated with talented people to create products for business use. 
+              I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.
+            </p>
+        </div>
+      </section>
+    
+        <table class="table table-borderless table-sm">
+            <thead class="text-center lead">
+                <tr>
+                    <th>Languages I Speak:</th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center lead text-muted">
+                <tr>
+                <td>Python, HTML, CSS</td>
+                </tr>
+            </tbody>
+
+            <thead class="text-center lead">
+                <tr>
+                    <th>Frameworks:</th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center lead text-muted">
+                <tr>
+                <td>Django, Bootstrap</td>
+                </tr>
+            </tbody>
+
+            <thead class="text-center lead">
+                <tr>
+                    <th>Database:</th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center lead text-muted">
+                <tr>
+                <td>PostgreSQL</td>
+                </tr>
+            </tbody>
+
+            <thead class="text-center lead">
+                <tr>
+                    <th>Version Control:</th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center lead text-muted">
+                <tr>
+                <td>Git</td>
+                </tr>
+            </tbody>
+            <thead class="text-center lead">
+                <tr>
+                    <th>Dev Tools:</th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center lead text-muted">
+                <tr>
+                    <td>Microsoft Visual Studio Code</td>
+                </tr>
+                <tr>
+                    <td>Atom</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                </tr>
+            </tbody>
+        </table>
+
+      <section class="jumbotron text-center album py-3 bg-light">
+        <div class="container">
+          <h2>My Recent Work</h2>
+            <p class="lead text-muted">
+                Here are a few projects I've worked on recently. Want to see more? <a href="mailto:fzl.ali33@gmail.com">Email Me.</a>
+            </p>
+        </div>
+      </section>
+    <div class="container">
+
+      <div class="row">
+        {%for a in inputs.all%}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{a.image.url}}" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">{{a.title}}</h5>
+              <p class="card-text">{{a.summary}}</p>
+              <a href="{{a.github_link}}" target="_blank" class="btn btn-primary btn-light">View</a>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Faisal Ali &copy; {% now "Y" %}</p>
+  </div>
+</footer>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
