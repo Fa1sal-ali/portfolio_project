@@ -1,0 +1,5 @@
+Django==3.0.7
+django-heroku
+psycopg2
+whitenoise
+gunicorn
