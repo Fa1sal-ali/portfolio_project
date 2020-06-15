@@ -127,9 +127,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'portfolio/static/'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'portfolio/static/'),
+# ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -143,4 +143,3 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'hKnGCXJO9UVp6J1I0joxonG3kmw',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-DISABLE_COLLECTSTATIC=1
