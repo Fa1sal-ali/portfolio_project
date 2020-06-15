@@ -5,6 +5,6 @@ from .models import Input
 admin.site.site_header = "Faisal's Portfolio & Blog Admin Console"
 
 class InputAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'summary')
+    list_display = ('title', 'summary')
 
 admin.site.register(Input, InputAdmin)
