@@ -1,4 +1,4 @@
-Django==3.0.7
+Django==2.2
 django-heroku
 psycopg2
 whitenoise
@@ -6,3 +6,4 @@ gunicorn
 pillow
 cloudinary
 django-cloudinary-storage
+django-pipeline==1.7.0
