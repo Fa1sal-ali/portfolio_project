@@ -22,5 +22,6 @@ import projects.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', projects.views.portfolio_home, name ='home'),
+    path('about-this-site/', projects.views.about, name ='about'),
     path('blog/', include('blogs.urls'), name = 'blog'),
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

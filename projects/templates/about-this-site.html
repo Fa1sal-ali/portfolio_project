@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Faisal Ali | Back-end, Front-end Developer &amp; Mentor</title>
-    <link rel="icon" href="{% static 'favicon.png' %}">
+    <link rel="icon" href="{% static 'favicon.png'%}">
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -43,7 +43,7 @@
                 <a class="nav-item nav-link" href="https://github.com/Fa1sal-ali" target="_blank">GitHub</a>
                 <a class="nav-item nav-link" href="https://www.linkedin.com/in/fa1zali/" target="_blank">Linkedin</a>
                 <a class="nav-item nav-link" href="{% static 'Faisal_Ali_Resume.docx' %}">Resume</a>
-                <a class="nav-item nav-link active" href="{% url 'blog' %}">Blog</a>
+                <a class="nav-item nav-link" href="{% url 'blog' %}">Blog</a>
                 <a class="nav-item nav-link" href="mailto:fzl.ali33@gmail.com" aria-disabled="true">Say Hello</a>
               </div>
             </div>
@@ -52,20 +52,33 @@
 
 <main role="main" class="container">
     <div class="row">
-        {%for b in pst.all reversed%}
-        <div class="col-md-9 blog-main pt-5">
-            <h4 class="blog-post-title font-weight-normal">{{b.title}}</h4>
-            <p class="blog-post-meta text-muted">posted by Faisal - {{b.date_time_stamp}}</p>
-            <hr>
-            <img src="{{b.image.url}}" alt="sample_image" class="rounded mx-auto d-block container">
-            <br>
-            <p class="text-justify">{{b.content|linebreaks}}</p>
+        <div class="col-md-6 blog-main pt-5">
+            <h2 class="font-weight-light">About This Site</h2>
+            <h4 class="text-muted font-weight-lighter pt-2">Technology and Background</h4>
+            <img class="pt-4" src="{% static 'code.jpg' %}" alt="code">
+
+            <p class="pt-4">I occasionally get asked for more details about this website so here they are!</p>
+
+            <h2 class="font-weight-light pt-4">Codebase</h2>
+
+            <p class="pt-4 text-justify">This site is developed using Python with <a href="https://www.djangoproject.com/">Django</a> as the web framework.
+            For frontend HTML, CSS and Bootstrap is used.</p>
+
+            <p class="pt-2 text-justify">Here are some more details:</p>
+
+            <ul>
+              <li>Hosted on <a href="https://www.heroku.com/">Heroku</a></li>
+              <li>Media files are hosted on Cloudinary</li>
+              <li>Local development and deployment are handled entirely using a Windows 10 running laptop</li>
+              <li>Python v3.8 used for development</li>
+              <li>Microsoft's Visual Studio Code used as the IDE </li>
+            </ul>  
+
         </div>
-        {%endfor%}
     </div>
+
 </main>
 
-<br>
 <footer class="text-muted pt-5">
   <div class="container">
     <p class="float-right">
